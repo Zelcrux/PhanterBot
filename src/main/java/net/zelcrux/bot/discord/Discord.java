@@ -41,7 +41,7 @@ public class Discord {
         embed.setAuthor(new WebhookEmbed.EmbedAuthor(getBot().getSelfUser().getName(), getBot().getSelfUser().getAvatarUrl(), "https://Zelcrux.net"));
         embed.addField(new WebhookEmbed.EmbedField(false, "[Status]", "ONLINE"));
         embed.addField(new WebhookEmbed.EmbedField(false, "Guild's", String.valueOf(bot.getGuilds().stream().count())));
-        embed.addField(new WebhookEmbed.EmbedField(false, "Type", ""));
+        embed.addField(new WebhookEmbed.EmbedField(false, "Type", "BOT"));
         embed.setFooter(new WebhookEmbed.EmbedFooter("@Zelcrux", getBot().getSelfUser().getAvatarUrl()));
         new WebhookClientBuilder(new Config().getWebhook()).build().send(embed.build());
     }
